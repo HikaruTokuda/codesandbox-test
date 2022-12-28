@@ -1,21 +1,23 @@
 /**
- * アロー関数
+ * 分割代入
  */
 
-function func1(str) {
-  return str;
-}
-console.log(func1("func1です"));
-
-const func2 = (str) => {
-  return str;
+const myProfile = {
+  name: "なまえ",
+  age: 28
 };
-console.log(func2("func2です"));
 
-const func3 = (str) => str;
-console.log(func3("func3です"));
+let message1 = `1. 名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+console.log(message1);
 
-const func4 = (num1, num2) => {
-  return num1 + num2;
-};
-console.log(func4(3, 2));
+const { name, age } = myProfile;
+const message2 = `2. 名前は${name}です。年齢は${age}です`;
+console.log(message2);
+
+const myProfileArray = ["なまえ", 28];
+const message3 = `3. 名前は${myProfileArray[0]}です。年齢は${myProfileArray[1]}です`;
+console.log(message3);
+
+const [nameFromArray, ageFromArray] = myProfileArray;
+const message4 = `4. 名前は${nameFromArray}です。年齢は${ageFromArray}です。`;
+console.log(message4);
